@@ -2,6 +2,8 @@
 
 一个基于 Streamlit 和 DeepSeek 大语言模型构建的 AI 智能伴侣聊天应用，支持个性化角色设定、多轮对话、会话管理以及流式回复展示。
 
+![AI Partner Chat Demo](resources/demo.png)
+
 ## 功能特点
 
 - 基于 Streamlit 的 Web 聊天界面

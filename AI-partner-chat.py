@@ -67,7 +67,9 @@ def load_session_list():
         for file in file_list:
             if file.endswith(".json"):
                 session_list.append(file[:-5])
-    return session_list.sort(reverse=True)
+    session_list.sort(reverse=True)
+    return session_list
+
 def load_session(session_name):
     try:
         if os.path.exists(f"sessions/{session_name}.json"):
@@ -90,6 +92,7 @@ def delete_session(session_name):
                 st.session_state.current_session = generate_session_name()
     except Exception:
         st.error("删除会话失败")
+        
 # 初始化聊天消息
 if 'messages' not in st.session_state:
     st.session_state.messages = []
@@ -189,3 +192,7 @@ if prompt: # 字符串自动转换为布尔值, 如果非空字符串则为True
     st.session_state.messages.append({"role": "assistant", "content": full_response})
     #保存当前会话信息
     save_session()
+
+
+
+
